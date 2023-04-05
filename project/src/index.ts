@@ -29,7 +29,11 @@ function accelerate(
   }
 }
 
-const spaceshipName = prompt("Insira o nome da nave a ser enviada.");
-const captainName = prompt("Insira o nome do capitão");
+const spaceshipName = prompt("Insira o nome da nave a ser enviada: ");
+const captainName = prompt("Insira o nome do capitão: ");
 
-sendSpaceship(spaceshipName, captainName);
+const currentShip = sendSpaceship(spaceshipName, captainName);
+
+const speed = Number(prompt("Insira a velocidade para qual deseja acelerar: "));
+
+accelerate(speed, currentShip);

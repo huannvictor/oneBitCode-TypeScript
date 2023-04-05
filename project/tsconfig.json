@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "watch": true
+    "watch": true,
+    "skipLibCheck": true
   }
 }

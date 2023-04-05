@@ -20,6 +20,8 @@ function accelerate(targetSpeed, spaceship) {
         alert("Mantendo a velocidade da ".concat(spaceship.name));
     }
 }
-var spaceshipName = prompt("Insira o nome da nave a ser enviada.");
-var captainName = prompt("Insira o nome do capitão");
-sendSpaceship(spaceshipName, captainName);
+var spaceshipName = prompt("Insira o nome da nave a ser enviada: ");
+var captainName = prompt("Insira o nome do capitão: ");
+var currentShip = sendSpaceship(spaceshipName, captainName);
+var speed = Number(prompt("Insira a velocidade para qual deseja acelerar: "));
+accelerate(speed, currentShip);
