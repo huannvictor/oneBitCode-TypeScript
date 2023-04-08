@@ -22,7 +22,7 @@ function cloneShip<ShipType extends Ship>(
   newName: string,
   newPilot: string
 ) {
-  const newShip = ship;
+  const newShip = { ...ship };
   newShip.name = newName;
   newShip.pilot = newPilot;
   return newShip;
@@ -44,3 +44,18 @@ const copy1 = cloneShip(falcon, "Milano", "Peter");
 const copy2 = cloneShip(xWing, "Black One", "Poe");
 
 console.log({ copy1, copy2 });
+
+interface EnemyShip {
+  name: string;
+  pilot: string;
+  flag?: string;
+}
+
+const enemyCopy = cloneShip(falcon, "Enemy", "Enemy");
+const enemyCopy2 = cloneShip<EnemyShip>(falcon, "Enemy", "Enemy");
+
+enemyCopy2.flag = "Imperial";
+
+//* a propriedade flag não funciona em enemyCopy pois ela não herda as propriedades de EnemyShip
+
+console.log({ enemyCopy, enemyCopy2 });
