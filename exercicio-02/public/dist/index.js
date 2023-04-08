@@ -80,9 +80,6 @@ function firstMenuOption() {
     Coordenadas: (${coordA}, ${coordB}, ${coordC}, ${coordD})
     Situação: ${situation}
   `);
-    // if (confirmation) {
-    //   addPlanet(name, [coordA, coordB, coordC, coordD], situation);
-    // }
     confirmation && addPlanet(name, [coordA, coordB, coordC, coordD], situation);
 }
 function secondMenuOption() {

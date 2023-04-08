@@ -124,10 +124,6 @@ function firstMenuOption() {
     Situação: ${situation}
   `);
 
-  // if (confirmation) {
-  //   addPlanet(name, [coordA, coordB, coordC, coordD], situation);
-  // }
-
   confirmation && addPlanet(name, [coordA, coordB, coordC, coordD], situation);
 }
 
