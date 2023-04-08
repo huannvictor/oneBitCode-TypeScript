@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "watch": true,
+    "outDir": "public/dist",
+    "skipLibCheck": true,
+    "target": "ESNext"
+  }
+}
